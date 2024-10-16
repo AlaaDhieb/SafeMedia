@@ -4,7 +4,7 @@ export const TwitterModel = types
     .model("Twitter")
     .props({
         id: types.identifierNumber,
-    })
+    }) 
     .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
     .actions((self) => ({
         updateEntity: function (entity: any) {
