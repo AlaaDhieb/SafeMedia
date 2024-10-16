@@ -28,16 +28,10 @@
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
     "expo-web-browser": "~13.0.3",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1530ba4 (update mobx stores and dependencies)
     "mobx": "^6.13.4",
     "mobx-state-tree": "^6.0.1",
     "mst-persist": "^0.1.4",
     "react": "18.2.0",
-=======
->>>>>>> 6b3167a (fix import)
     "react-dom": "18.2.0",
     "react-native": "0.74.5",
     "react-native-gesture-handler": "~2.16.1",
