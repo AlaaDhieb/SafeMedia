@@ -17,6 +17,7 @@ export default function HomeScreen() {
   useEffect(() => {
     appointmentStore.fetchUpcomingAppointmentsCustomer();    
   }, []);
+<<<<<<< HEAD
 =======
 import SocialButtons from '@/components/navigation/SocialButtons';
 import * as React from 'react';
@@ -26,6 +27,8 @@ import { Appbar } from "react-native-paper";
 export default function HomeScreen() {
   const [selectedButton, setSelectedButton] = useState<string | null>('Twitter');
 >>>>>>> 0ca65ae (add social media buttons component)
+=======
+>>>>>>> 1530ba4 (update mobx stores and dependencies)
 
   const handlePress = (buttonName: string) => {
     setSelectedButton(buttonName);

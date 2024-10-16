@@ -29,6 +29,9 @@
     "expo-system-ui": "~3.0.7",
     "expo-web-browser": "~13.0.3",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1530ba4 (update mobx stores and dependencies)
     "mobx": "^6.13.4",
     "mobx-state-tree": "^6.0.1",
     "mst-persist": "^0.1.4",
