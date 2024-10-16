@@ -1,12 +1,12 @@
 import { types } from "mobx-state-tree";
 
-import { AppointmentStore } from "./appointment/AppointmentStore";
+import { TwitterStore } from "./twitter/TwitterStore";
 import { withEnvironment } from "../extensions/with-environment";
 import { Environment } from "../environment";
 
 export const RootStore = types
     .model("RootStore", {
-        appointmentStore: types.optional(AppointmentStore, {}),
+        twitterStore: types.optional(TwitterStore, {}),
     })
     .volatile(() => ({
         isRestored: false,
@@ -22,7 +22,7 @@ export const createRootStore = () => {
     const env = new Environment();
     const rootStore = RootStore.create(
         {
-            appointmentStore: AppointmentStore.create(),
+            twitterStore: TwitterStore.create(),
         },
         env,
     );
