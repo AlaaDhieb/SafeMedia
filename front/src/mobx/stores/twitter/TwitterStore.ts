@@ -17,13 +17,18 @@ export const TwitterStore = types
   }))
 
   .actions((self) => ({
-    fetchPostsTwitter: flow(function* () {
+    fetchPostsTwitter: async function () {
       try {
-        self.setTwitterPosts([{ id: 132234 }]);
+        const response = await self.environment.api.instance.get(
+          `/api/tweets}`,
+        );
+        if (response.status === 200) {
+          self.setTwitterPosts(response.data);
+        }
       } catch (error) {
-        self.setTwitterPosts([{ id: 132234 }]);
+        console.log(error);
       }
-    }),
+    },
   }));
 
 export type TwitterStoreType = typeof TwitterStore.Type;
