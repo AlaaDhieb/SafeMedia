@@ -8,14 +8,14 @@ import { Appbar, Text } from "react-native-paper";
 
 export default function HomeScreen() {
   const rootStore = useRootStore();
-  const { appointmentStore } = rootStore;
+  const { twitterStore } = rootStore;
 
   const [selectedButton, setSelectedButton] = useState<string | null>(
     "Twitter"
   );
 
   useEffect(() => {
-    appointmentStore.fetchUpcomingAppointmentsCustomer();    
+    twitterStore.fetchPostsTwitter();    
   }, []);
 <<<<<<< HEAD
 =======
@@ -47,7 +47,7 @@ export default function HomeScreen() {
         selectedButton={selectedButton}
         handlePress={handlePress}
       />
-      <Text>{appointmentStore.appointmentsPro[0].id}</Text>
+      <Text>{twitterStore.twitterPosts[0].id}</Text>
 
       <PostCard />
 =======

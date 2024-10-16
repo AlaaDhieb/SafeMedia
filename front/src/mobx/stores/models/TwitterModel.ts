@@ -1,7 +1,7 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree";
 
-export const ProAppointmentModel = types
-    .model("ProAppointment")
+export const TwitterModel = types
+    .model("Twitter")
     .props({
         id: types.identifierNumber,
     })
@@ -21,12 +21,12 @@ export const ProAppointmentModel = types
   *  .postProcessSnapshot(omit(["password", "socialSecurityNumber", "creditCardNumber"]))
   */
 
-type ProAppointmentType = Instance<typeof ProAppointmentModel>;
-export type ProAppointment = ProAppointmentType;
-type ProAppointmentTypeSnapshotType = SnapshotOut<typeof ProAppointmentModel>;
-export type ProAppointmentTypeSnapshot = ProAppointmentTypeSnapshotType;
+type TwitterType = Instance<typeof TwitterModel>;
+export type Twitter = TwitterType;
+type TwitterTypeSnapshotType = SnapshotOut<typeof TwitterModel>;
+export type TwitterTypeSnapshot = TwitterTypeSnapshotType;
 
-export const createProAppointmentDefaultModel = () =>
-    types.optional(ProAppointmentModel, {
+export const createTwitterDefaultModel = () =>
+    types.optional(TwitterModel, {
         id: -1,
     });

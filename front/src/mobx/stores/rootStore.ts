@@ -2,11 +2,11 @@
 
 import { types } from "mobx-state-tree";
 //import { UserStore } from "./user/UserStore";
-import { AppointmentStore } from "./appointment/AppointmentStore";
+import { TwitterStore } from "./twitter/TwitterStore";
 
 export const RootStore = types.model("RootStore", {
     //userStore: types.optional(UserStore, {}),
-    appointmentStore: types.optional(AppointmentStore, {}),
+    twitterStore: types.optional(TwitterStore, {}),
 });
 
 export type RootStoreType = typeof RootStore.Type;
